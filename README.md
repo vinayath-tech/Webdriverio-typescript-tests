@@ -24,7 +24,7 @@
       
 ## Run tests in your machine
 
-   Require npm & yarn to be pre-installed.
+   Require yarn to be pre-installed.
    1. Git clone the project
    2. Navigate to project folder and execute ``yarn install``
    3. After installation of dependencies, then execute ``yarn test``
