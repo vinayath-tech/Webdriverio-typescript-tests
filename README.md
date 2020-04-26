@@ -2,7 +2,7 @@
 
 ## Introduction
  
-   This UI acceptance testing framework is created using the following tools & libraries:
+   This UI acceptance testing framework created using the following tools & libraries:
    
      - webdriverio
      - mocha
