@@ -18,9 +18,13 @@
    3. Once the image is built, then execute 
       ``docker-compose up --abort-on-container-exit --exit-code-from webdriverio-ui-tests``
       
+      --abort-on-container-exit - simply tears down the stack once the test container finishes. 
+      
+      -exit-code-from - Return the exit code of the selected service container. Implies --abort-on-container-exit.
+      
 ## Run tests in your machine
 
-   Require npm & yarn to be pre-installed.
+   Require yarn to be pre-installed.
    1. Git clone the project
    2. Navigate to project folder and execute ``yarn install``
    3. After installation of dependencies, then execute ``yarn test``
