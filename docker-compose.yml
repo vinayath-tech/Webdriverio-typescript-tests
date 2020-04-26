@@ -1,0 +1,27 @@
+version: "3"
+services:
+  hub:
+    image: selenium/hub:3.141.59-yttrium
+    ports:
+      - "4444:4444"
+  chrome:
+    image: selenium/node-chrome:3.141.59-yttrium
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+  firefox:
+    image: selenium/node-firefox:3.141.59-yttrium
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+  webdriverio-ui-tests:
+    image: wdio-ui-tests
+    depends_on:
+       - chrome
+       - firefox
+    environment:
+       - HUB_HOST=hub
+    volumes: 
+      - ./allure-report:/workdir/allure-report
